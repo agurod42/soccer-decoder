@@ -55,7 +55,7 @@ void history_print(history_t *history) {
     printf("team a goals: %d\r\n", history->goals[0]);
     printf("team b goals: %d\r\n", history->goals[1]);
     printf("scores:\r\n");
-    for (int i = 0; i < history->scores_arr_length; i += sizeof(history_score_t)) {
+    for (int i = 0; i < history->scores_arr_length; i++) {
         printf("  %s: %d\r\n", history->scores[i].score, history->scores[i].ocurrences);
     }
 }
